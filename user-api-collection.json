@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "def4473d-86b3-4557-8357-47f7d309e623",
+		"name": "Mongo exam USERS Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47300265",
+		"_collection_link": "https://chirag-pancholi-2593281.postman.co/workspace/Chirag's-Workspace~d7caca35-ab7f-48c9-86b6-6d0406e5de8d/collection/47300265-def4473d-86b3-4557-8357-47f7d309e623?action=share&source=collection_link&creator=47300265"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"abc@test.in\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTA5ZmU0NzMxZjBmY2VjNWE5MjQ2ZiIsImVtYWlsIjoiYWJjQHRlc3QuaW4iLCJpYXQiOjE3NTQzMDg2MjUsImV4cCI6MTc1NDM5NTAyNX0.j2Zsw618V6BgrdICF14RxNhYJN-N68CgXjlDDjd-Om8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTA2MWQzNDk2YTQ1ZjYyMDU1NWJlNSIsImVtYWlsIjoiYWxleEB0ZXN0LmluIiwiaWF0IjoxNzU0MzAwNDM2LCJleHAiOjE3NTQzODY4MzZ9.IFKv5EMrYnLtlPHgb4Lq8h-Xt0XDcCbbILlJz0uY1t8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pass Change",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFiNjNmNTdkYmIxNjg3YzFkNjRjNiIsImVtYWlsIjoiYWJjQHRlc3QuaW4iLCJpYXQiOjE3NTQzNzk4NzIsImV4cCI6MTc1NDQ2NjI3Mn0.g9hiHfg-cntssvn0QSGV0LtLxMcNtwSJtFCGRSpXQYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"oldpassword\": \"Test123\",\n    \"newpassword\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/change-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"alex\",\n    \"email\": \"alex@test.in\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pass Reset",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTA2MWQzNDk2YTQ1ZjYyMDU1NWJlNSIsImVtYWlsIjoiYWxleEB0ZXN0LmluIiwiaWF0IjoxNzU0MzAwNDM2LCJleHAiOjE3NTQzODY4MzZ9.IFKv5EMrYnLtlPHgb4Lq8h-Xt0XDcCbbILlJz0uY1t8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"abc@test.in\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pass Reset Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFiNjNmNTdkYmIxNjg3YzFkNjRjNiIsImVtYWlsIjoiYWJjQHRlc3QuaW4iLCJpYXQiOjE3NTQzNzk4NzIsImV4cCI6MTc1NDQ2NjI3Mn0.g9hiHfg-cntssvn0QSGV0LtLxMcNtwSJtFCGRSpXQYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newpassword\": \"Test123\"    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/update-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"update-password"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

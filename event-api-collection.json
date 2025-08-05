@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "7f39468f-9271-4fcc-896f-c2a013d9f616",
+		"name": "Mongo Exam events api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47300265",
+		"_collection_link": "https://chirag-pancholi-2593281.postman.co/workspace/Chirag's-Workspace~d7caca35-ab7f-48c9-86b6-6d0406e5de8d/collection/47300265-7f39468f-9271-4fcc-896f-c2a013d9f616?action=share&source=collection_link&creator=47300265"
+	},
+	"item": [
+		{
+			"name": "Event Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFiNjNmNTdkYmIxNjg3YzFkNjRjNiIsImVtYWlsIjoiYWJjQHRlc3QuaW4iLCJpYXQiOjE3NTQzNzk4NzIsImV4cCI6MTc1NDQ2NjI3Mn0.g9hiHfg-cntssvn0QSGV0LtLxMcNtwSJtFCGRSpXQYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"monogodb express demo example\",\n    \"description\": \"this is a example of api using mongo exp\",\n    \"date\": \"2025-08-04\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/event/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"event",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Event List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFiNjNmNTdkYmIxNjg3YzFkNjRjNiIsImVtYWlsIjoiYWJjQHRlc3QuaW4iLCJpYXQiOjE3NTQzNzk4NzIsImV4cCI6MTc1NDQ2NjI3Mn0.g9hiHfg-cntssvn0QSGV0LtLxMcNtwSJtFCGRSpXQYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/event/?page=1&limit=2&search=invite&sort=date&order=asc&startDate=2025-08-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"event",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "search",
+							"value": "invite"
+						},
+						{
+							"key": "sort",
+							"value": "date"
+						},
+						{
+							"key": "order",
+							"value": "asc"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-08-05"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single Event Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFiNjNmNTdkYmIxNjg3YzFkNjRjNiIsImVtYWlsIjoiYWJjQHRlc3QuaW4iLCJpYXQiOjE3NTQzNzk4NzIsImV4cCI6MTc1NDQ2NjI3Mn0.g9hiHfg-cntssvn0QSGV0LtLxMcNtwSJtFCGRSpXQYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/event/6891b6c357dbb1687c1d64d3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"event",
+						"6891b6c357dbb1687c1d64d3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Event Invite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFiNjNmNTdkYmIxNjg3YzFkNjRjNiIsImVtYWlsIjoiYWJjQHRlc3QuaW4iLCJpYXQiOjE3NTQzNzk4NzIsImV4cCI6MTc1NDQ2NjI3Mn0.g9hiHfg-cntssvn0QSGV0LtLxMcNtwSJtFCGRSpXQYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"emails\": [\"alex@test.in\", \"xyz@test.in\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/event/6891b6c357dbb1687c1d64d3/invite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"event",
+						"6891b6c357dbb1687c1d64d3",
+						"invite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Event",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFiNjNmNTdkYmIxNjg3YzFkNjRjNiIsImVtYWlsIjoiYWJjQHRlc3QuaW4iLCJpYXQiOjE3NTQzNzk4NzIsImV4cCI6MTc1NDQ2NjI3Mn0.g9hiHfg-cntssvn0QSGV0LtLxMcNtwSJtFCGRSpXQYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"mongodb user event api\",\n    \"date\": \"2025-08-06\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/event/6891b6f157dbb1687c1d64d5/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"event",
+						"6891b6f157dbb1687c1d64d5",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "Token",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

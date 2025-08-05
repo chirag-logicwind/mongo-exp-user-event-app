@@ -14,19 +14,11 @@ const eventSchema = new mongoose.Schema({
         default: true 
     },
     date: Date,
-    createdBy: {
-        type: ObjectId,
+    creator: {
+        type: mongoose.Types.ObjectId,
         ref: 'User',
         required: true
-    },
-    updatedBy: {
-        type: ObjectId,
-        ref: 'User'
-    },
-    invitedUsers: [{
-        type: ObjectId,
-        ref: 'User'
-    }]
+    }    
 }, { timestamps: true });
 
 const Event = mongoose.model('Event', eventSchema);
